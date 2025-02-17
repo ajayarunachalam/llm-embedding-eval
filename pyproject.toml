@@ -1,0 +1,29 @@
+[project]
+name = "llm-embedding-eval"
+version = "0.1"
+description = "LLM plugin for embedding evaluation with semantic scoring"
+readme = "README.md"
+authors = [{name = "Ajay Arunachalam"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "llm>=0.9",
+    "numpy>=1.20",
+    "torch>=1.9",
+    "transformers>=4.0",
+    "accelerate>=0.20"
+]
+
+[project.urls]
+Homepage = "https://github.com/ajayarunachalam/llm-embedding-eval"
+Issues = "https://github.com/ajayarunachalam/llm-embedding-eval/issues"
+
+[project.entry-points.llm]
+eval = "llm_embedding_eval"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+
