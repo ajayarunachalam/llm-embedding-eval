@@ -1,6 +1,11 @@
 # llm-embedding-eval
 
-[LLM](https://llm.datasette.io/) plugin that will compare two embeddings and determine their similarity/relevance based on various metrics. It also supports `SemScore` as proposed in a publication(https://arxiv.org/abs/2401.17072).
+[![PyPI](https://img.shields.io/pypi/v/llm-embedding-eval.svg)](https://pypi.org/project/llm-embedding-eval/)
+[![Tests](https://github.com/ajayarunachalam/llm-embedding-eval/actions/workflows/test.yml/badge.svg)](https://github.com/ajayarunachalam/llm-embedding-eval/actions/workflows/test.yml)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/ajayarunachalam/llm-embedding-eval/blob/main/LICENSE)
+
+[LLM](https://llm.datasette.io/) plugin that will compare two embeddings and determine their similarity/relevance based on various metrics. 
+It also supports `SemScore` as proposed in a publication(https://arxiv.org/abs/2401.17072).
 
 ## Installation
 
@@ -15,26 +20,7 @@ The plugin adds a new command, `llm eval`.
 
 Usage: llm eval [OPTIONS] EMBEDDING1 EMBEDDING2
 
-Options:
-  --query TEXT                    The query to use for embedding evaluation.
-                                  [required]
-  --metric [cosine|euclidean|l1|semscore|llm]
-                                  Metric to use for comparison
-  --text1 TEXT                    First text for semantic comparison (optional
-                                  for DB files)
-  --text2 TEXT                    Second text for semantic comparison
-                                  (optional for DB files)
-  --model-path TEXT               Path to embedding model (default: sentence-
-                                  transformers/all-mpnet-base-v2)
-  -m, --llm-model TEXT            LLM model to use for evaluation
-  --prompt TEXT                   Custom evaluation prompt template
-  --db-table TEXT                 Table name for DB files
-  --db-column TEXT                Column name for embedding in DB
-  --db-text-column TEXT           Column name for text in DB (if not provided,
-                                  will try to auto-detect)
-  --db-row1 INTEGER               Row ID for first embedding in DB
-  --db-row2 INTEGER               Row ID for second embedding in DB
-  --help                          Show this message and exit.
+![alt text](https://github.com/ajayarunachalam/llm-embedding-eval/blob/main/options.png)
 
   Evaluate similarity between two embeddings
 
